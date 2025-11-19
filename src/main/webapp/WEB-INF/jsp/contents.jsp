@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>スケジュール帳CONTENTS</title>
+<title>スケジュール帳 CONTENTS</title>
 <!-- 外部CSSファイルを読み込み -->
 <link rel="stylesheet" href="<%=request.getContextPath() %>/css/main.css">
 </head>
 <body>
 
-    <h1>スケジュール帳CONTENTS</h1>
+    <h1>スケジュール帳 CONTENTS</h1>
     <div class="btn-container">
         <form action="monthView.jsp" method="get">
             <button type="submit" class="schedule-btn">月</button>
