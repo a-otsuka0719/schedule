@@ -1,7 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -11,15 +10,18 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-
 import model.User;
 
 @WebServlet("/Main")
 public class Main extends HttpServlet {
   private static final long serialVersionUID = 1L;
 
+ protected void doGet(HttpServletRequest request,
+		 HttpServletResponse response) 
+		 throws ServletException, IOException{
+  
 
-    // ログインしているかどうか確認するため
+    // ログインしているか確認するため
     // セッションスコープからユーザー情報を取得
     HttpSession session = request.getSession();
     User loginUser = (User) session.getAttribute("loginUser");
@@ -33,7 +35,11 @@ public class Main extends HttpServlet {
       dispatcher.forward(request, response);
     }
   }
-  protected record doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+
+  protected void doPost(HttpServletRequest request,
+		  HttpServletResponse response) 
+		  throws ServletException, IOException {
     // リクエストパラメータの取得
     request.setCharacterEncoding("UTF-8");
     String text = request.getParameter("text");
@@ -51,3 +57,10 @@ public class Main extends HttpServlet {
     dispatcher.forward(request, response);
   }
 }
+  }
+
+
+
+
+
+
