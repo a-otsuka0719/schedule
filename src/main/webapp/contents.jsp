@@ -11,8 +11,7 @@ User loginUser = (User) session.getAttribute("loginUser");
 <meta charset="UTF-8">
 <title>スケジュール帳 CONTENTS</title>
 <!-- 外部CSSファイルを読み込み -->
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/css/main.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css">
 </head>
 <body>
 	<%
