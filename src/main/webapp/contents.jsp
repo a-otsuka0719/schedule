@@ -17,14 +17,14 @@ User loginUser = (User) session.getAttribute("loginUser");
 	<%
 	if (loginUser != null) {
 	%>
-	<p>ログインに成功しました</p>
+	<p>ログインに成功</p>
 	<p>
 		ようこそ<%=loginUser.getName()%>さん
 	</p>
 	<%
 	} else {
 	%>
-	<p>ログインに失敗しました</p>
+	<p>ログインに失敗</p>
 	<a href="index.jsp">トップへ</a>
 	<%
 	}
