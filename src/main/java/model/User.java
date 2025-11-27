@@ -2,7 +2,7 @@ package model;
 import java.io.Serializable;
 
 public class User implements Serializable {
-  private String name; // ユーザー名
+  private String name; // ユーザー名 
   private String pass; // パスワード
 
   public User() { }
